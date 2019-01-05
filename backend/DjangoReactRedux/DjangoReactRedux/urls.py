@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls')),
 
     # api
-    url(r'^api/articles/', include('articles.api.urls')),
+    url(r'^api/', include('articles.api.urls')),
 
 ]
 

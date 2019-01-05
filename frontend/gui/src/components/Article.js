@@ -1,13 +1,6 @@
 import React from 'react';
-import { List, Avatar, Icon } from 'antd';
+import { List } from 'antd';
 import { Link } from 'react-router-dom';
-
-const IconText = ({ type, text }) => (
-  	<span>
-    	<Icon type={type} style={{ marginRight: 8 }} />
-	    {text}
-	</span>
-);
 
 const Articles = (props) => {
 	return (
