@@ -14,11 +14,16 @@ class CustomForm extends React.Component {
 
     switch(requestType) {
       case "POST":
+        event.preventDefault();
         return axios.post('http://127.0.0.1:8000/api/articles/', {
           title: title,
           content: content
         })
-        .then(res => console.log(res))
+        .then(res => {
+          console.log(res.status)
+          const { onCreate } = this.props
+                onCreate()
+        })
         .catch(err => console.log(err))
       case "PUT":
         event.preventDefault();

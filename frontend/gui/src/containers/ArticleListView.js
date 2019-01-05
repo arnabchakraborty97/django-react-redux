@@ -32,7 +32,7 @@ class ArticleList extends React.Component {
 
 				<Row>
 					<Col span={15}>
-						<Articles data={this.state.articles} />
+						<Articles data={this.state.articles} onDelete={() => this.fetchArticles()} />
 					</Col>
 					<Col span={8} offset={1}>
 						<Card title="Create Article">
@@ -40,6 +40,7 @@ class ArticleList extends React.Component {
 								requestType="POST"
 								articleID={null}
 								buttonText="Create"
+								onCreate={() => this.fetchArticles()}
 							/>
 						</Card>
 					</Col>
