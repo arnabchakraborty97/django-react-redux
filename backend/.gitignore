@@ -1,0 +1,6 @@
+*.pyc
+*.pyo
+env/*
+static/static/*
+static/static-only/*
+static/media/*
